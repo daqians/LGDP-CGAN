@@ -2,7 +2,7 @@
 
 Code for *Conditional Geological Core Image Generation via Multimodal Feature Fusion Framework*:
 a conditional GAN that generates core images from Formation MicroScanner (FMS) image patches and
-eight depth-aligned well-log values. The code is built on [pix2pixHD](https://github.com/NVIDIA/pix2pixHD).
+eight depth-aligned well-log values.
 
 ## Requirements
 
