@@ -30,7 +30,7 @@ dataroot/
 bash scripts/train.sh <experiment_name> <dataroot> [checkpoints_dir] [log_norm]
 ```
 
-`log_norm` selects the well-log normalisation (`data/log_norm.py`): `phase_minmax` (default) or `train_robust`.
+`log_norm` selects the well-log normalisation (`data/log_norm.py`): `train_robust` (default; statistics fitted on the training set only and reused at test time) or `phase_minmax`.
 
 ## Test
 

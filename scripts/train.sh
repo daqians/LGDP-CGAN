@@ -1,11 +1,11 @@
 #!/bin/bash
 # Train LGDP-CGAN.
-# Usage: bash scripts/train.sh <experiment_name> <dataroot> [checkpoints_dir] [log_norm: phase_minmax (default) | train_robust]
+# Usage: bash scripts/train.sh <experiment_name> <dataroot> [checkpoints_dir] [log_norm: train_robust (default) | phase_minmax]
 set -e
 NAME=${1:?experiment name}
 DATAROOT=${2:?dataroot}
 CKPT=${3:-./checkpoints}
-LOG_NORM=${4:-phase_minmax}
+LOG_NORM=${4:-train_robust}
 
 python train.py \
     --name "${NAME}" \

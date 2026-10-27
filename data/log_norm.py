@@ -1,10 +1,10 @@
 """Normalisation of the eight well-log values.
 
---log_norm phase_minmax (default)
+--log_norm phase_minmax
     Min-max scale each feature to [-1, 1] with the minimum and maximum of the CSV being read
     (train CSV when training, test CSV when testing). No special treatment of missing values.
 
---log_norm train_robust
+--log_norm train_robust (default)
     1. values <= -999 (the log null value -999.25) are missing and replaced by the training-set median;
     2. IDPH -> log10(IDPH), Inv -> sign(x) * log10(1 + |x|);
     3. clip to the training-set 1st..99th percentile and scale linearly to [-1, 1].

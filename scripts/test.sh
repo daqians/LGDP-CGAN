@@ -1,14 +1,14 @@
 #!/bin/bash
 # Generate core images for the test set and report PSNR / SSIM.
 # Usage: bash scripts/test.sh <experiment_name> <dataroot> [checkpoints_dir] [results_dir] [which_epoch] [log_norm]
-#   log_norm must match the one used for training (phase_minmax by default)
+#   log_norm must match the one used for training (train_robust by default)
 set -e
 NAME=${1:?experiment name}
 DATAROOT=${2:?dataroot}
 CKPT=${3:-./checkpoints}
 RESULTS=${4:-./results}
 EPOCH=${5:-latest}
-LOG_NORM=${6:-phase_minmax}
+LOG_NORM=${6:-train_robust}
 
 python test.py \
     --name "${NAME}" \

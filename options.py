@@ -18,9 +18,9 @@ def _base_parser():
     p.add_argument('--n_blocks_global', type=int, default=9, help='number of residual blocks at the bottleneck')
     p.add_argument('--gate_reduction', type=int, default=4, help='channel reduction in the attention gates')
     p.add_argument('--fineSize', type=int, default=512, help='FMS input and core image size')
-    p.add_argument('--log_norm', type=str, default='phase_minmax', choices=['phase_minmax', 'train_robust'],
-                   help='well-log normalisation, see data/log_norm.py: phase_minmax (default, min-max of the CSV being read) '
-                        'or train_robust (missing values -> train median, log10 IDPH, signed log Inv, train 1-99%% clip)')
+    p.add_argument('--log_norm', type=str, default='train_robust', choices=['phase_minmax', 'train_robust'],
+                   help='well-log normalisation, see data/log_norm.py: train_robust (default; missing values -> train median, log10 IDPH, signed log Inv, train 1-99%% clip) '
+                        'or phase_minmax (min-max of the CSV being read)')
     return p
 
 
