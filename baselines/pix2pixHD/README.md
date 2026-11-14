@@ -1,6 +1,6 @@
 # pix2pixHD baseline: FMS → core image
 
-Baseline code for *Conditional Geological Core Image Generation via Multimodal Feature Fusion Framework*.
+Baseline code for *Multimodal generation of synthetic carbonate core images from borehole microresistivity images and conventional downhole logs*.
 It generates a core image from a Formation MicroScanner (FMS) image patch alone, without well logs.
 In the paper it is reported as **Pix2Pix-HD, 3 pads** and **Pix2Pix-HD, 4 pads**. The two runs use the
 same code and differ only in how many of the four FMS pads are used as input channels.
